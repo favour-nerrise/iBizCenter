@@ -1,5 +1,3 @@
-$(document).ready(function() {
-    $(function () {
 //Import necessary modules/packages
 var firebase = require('firebase')
 var QuickBooks = require('./index.js')
@@ -56,10 +54,11 @@ var qbo = new QuickBooks(consumerKey,
 //         }
 //     })
 
+var companyName = "Weiskopf Consulting"
 //Find customers from Sandbox Company and upload to Firebase
 var customerList;
 var BillingAddress;
-var companyName = document.getElementById('name')
+// var companyName = document.getElementById('name')
 qbo.findCustomers({
     fetchAll: true
 }, function(e, customers) {
@@ -78,13 +77,13 @@ qbo.findCustomers({
     BillingAddress = selectedUser.BillAddr
 })
 
-//Upload customerList to Firebase database
-function uploadCustomerList() {
-    database()
-      .ref('rn-firebase-upload')
-      .child('employees')
-      .put(employeeList, { contentType : 'application/json' })
-      .catch(err => console.error(err));
-}
-});
-});
+// //Upload customerList to Firebase database
+// function uploadCustomerList() {
+//     database()
+//       .ref('rn-firebase-upload')
+//       .child('employees')
+//       .put(employeeList, { contentType : 'application/json' })
+//       .catch(err => console.error(err));
+// }
+// });
+// });
