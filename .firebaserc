@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "ibizverify-281fa"
+    "default": "ibizverify-281fa",
+    "ibiz": "ibizverify-281fa"
   }
 }
